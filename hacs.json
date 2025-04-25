@@ -1,0 +1,8 @@
+{
+  "name": "HassLens Connector",
+  "content_in_root": false,
+  "domains": [ "hasslens" ],
+  "country": "US",
+  "homeassistant": "2022.0.0",
+  "render_readme": true
+}
