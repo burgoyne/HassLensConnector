@@ -1,0 +1,9 @@
+{
+  "domain": "hasslens_connector",
+  "name": "HassLens Connector",
+  "version": "0.1.0",
+  "config_flow": true,
+  "requirements": [],
+  "documentation": "https://example.com",
+  "codeowners": ["@yourgithub"]
+}
