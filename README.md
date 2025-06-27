@@ -1,48 +1,27 @@
-﻿# HassLens Home Assistant Integration
+# HassLens Connector
 
-The HassLens integration allows Home Assistant users to connect their instance with the HassLens web app. Once connected, Home Assistant configuration data (automations, devices, scripts, etc.) are securely sent to HassLens for analysis and documentation.
+HassLens Connector is a Home Assistant custom integration that exposes your automation, script and device YAML files through a simple API. The integration is configured through the Home Assistant UI.
 
 ## Features
-- UI-based setup via config flow
-- Posts configuration YAML or state data to your HassLens account
+- Config flow setup via the UI
+- Provides a secured REST endpoint for retrieving YAML files
 
 ## Installation
-### Option 1: HACS (Recommended)
-1. Go to **HACS → Integrations → 3-dot menu → Custom repositories**
-2. Add this repo URL and set type to `Integration`
-3. Search for "HassLens" and install
-4. Restart Home Assistant
+### HACS
+1. In HACS, open **Integrations** and select **Custom repositories** from the menu.
+2. Add this repository URL and set the category to `Integration`.
+3. Search for "HassLens Connector" and install.
+4. Restart Home Assistant.
 
-### Option 2: Manual
-1. Copy this repo into `/config/custom_components/hasslens`
-2. Restart Home Assistant
+### Manual
+1. Copy the `custom_components/hasslens_connector` directory to your Home Assistant `custom_components` folder.
+2. Restart Home Assistant.
 
 ## Configuration
-After installation, go to **Settings → Devices & Services → Add Integration** and search for "HassLens".
-
-You'll be asked for:
+Go to **Settings → Devices & Services → Add Integration** and search for "HassLens Connector". Enter paths for your automations, scripts and devices YAML files (defaults are provided).
 
 ## Privacy
-This integration only sends data when configured to do so, and securely communicates over HTTPS.
-
----
+This integration only reads the YAML files that you specify. No data is sent externally.
 
 ## License
 MIT (see `LICENSE`)
-
-## Author
-Created by [your name or @github]
-
----
-
-## Questions or Issues?
-Feel free to open an issue on this GitHub repo.
-
----
-
-## Future Plans
-
----
-
-## Contributions Welcome!"# HassLensConnector" 
-# HassLensConnector

@@ -1,9 +1,0 @@
-{
-  "domain": "hasslens",
-  "name": "HassLens Connector",
-  "version": "0.1.0",
-  "config_flow": true,
-  "documentation": "https://your-docs-url",
-  "requirements": [ "aiohttp" ],
-  "codeowners": [ "@yourgithub" ]
-}
