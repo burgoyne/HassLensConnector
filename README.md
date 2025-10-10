@@ -2,9 +2,10 @@
 
 HassLens Connector is a Home Assistant custom integration that exposes your automation, script and device YAML files through a simple API. The integration is configured through the Home Assistant UI.
 
+It is designed to work with the [HassLens](https://hasslens.com) application, which provides a dashboard for visualizing and managing your Home Assistant entities.
+
 ## Features
-- Config flow setup via the UI
-- Provides a secured REST endpoint for retrieving YAML files
+- Provides a secured REST endpoint for retrieving configuration files for use in the HassLens application.
 
 ## Installation
 ### HACS
@@ -18,10 +19,21 @@ HassLens Connector is a Home Assistant custom integration that exposes your auto
 2. Restart Home Assistant.
 
 ## Configuration
-Go to **Settings → Devices & Services → Add Integration** and search for "HassLens Connector". Enter paths for your automations, scripts and devices YAML files (defaults are provided).
+Go to **Settings → Devices & Services → Add Integration** and search for "HassLens Connector".
+
+When configuring you will be asked to provide paths for your automations, scripts, and devices files. The form is prefilled with defaults; if you accept the prefilled values they will be saved. These default values will work for most Home Assistant installations.
+
+Defaults:
+- Automations: `automations.yaml`
+- Scripts: `scripts.yaml`
+- Devices: `.storage/core.device_registry`
+
+API endpoint
+- The integration exposes: `/api/hasslens_connector/{yaml_type}` where `{yaml_type}` is `automations`, `scripts`, or `devices`.
+- The endpoint requires authentication which will be handled by Home Assistant's long-lived access tokens (configured through your HassLens account). 
 
 ## Privacy
-This integration only reads the YAML files that you specify. No data is sent externally.
+This integration only reads the files that you specify. No files are modified, and data is sent securely to your HassLens application dashboard.  
 
 ## License
 MIT (see `LICENSE`)

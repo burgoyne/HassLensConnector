@@ -11,7 +11,7 @@ from .const import (
 DEFAULTS = {
     CONF_AUTOMATIONS_PATH: "automations.yaml",
     CONF_SCRIPTS_PATH: "scripts.yaml",
-    CONF_DEVICES_PATH: "devices.yaml",
+    CONF_DEVICES_PATH: ".storage/core.device_registry",
 }
 
 class HassLensConnectorConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
